@@ -32,14 +32,15 @@ function App() {
     <Header text='feedbackUi' bgColor='red' textColor='blue'/>
     <div className='container'>
     <Routes>
-    <Route exact path='/'>
-  <FeedbackForm handleAdd={addFeedback}/> 
-    {/* <FeedbackStats feedback={feedback}/>
+    <Route exact path='/'   element={
+      <>
+       <FeedbackForm handleAdd={addFeedback}/> 
+    <FeedbackStats feedback={feedback}/>
     <FeedbackList feedback={feedback}
-    handleDelete={deleteFeedback}/> */}
-        </>     
-   
-    </Route>
+    handleDelete={deleteFeedback}/>
+      </>
+    }/>
+
     </Routes>
     
     
